@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OneOaaS运维架构 运维服务 运维工具解决方案专家</title>
+
+    <link href='static/css/fonts.css' rel='stylesheet' type='text/css'>
+    <link href="static/css/core.css" rel="stylesheet"/>
+    <script src="static/js/jquery.js"></script>
+    <!--script src="static/js/ga_social_tracking.js"></script>
+    <script src="static/js/component.js"></script>
+    <script src="static/js/hires.js"></script-->
+    <script src="static/js/carousel.js"></script>
+    <script src="static/js/modal.js"></script>
+    <script src="static/js/download_popup.js"></script>
+    <script src="static/js/subscribe.js"></script>
+    <script src="static/js/banner.js"></script>
+    <link href="static/css/style.css" rel="stylesheet"/>
+    <script src="static/js/index.js"></script>
+
+<body>
+
+
+<div class="site-wrapper">
+
+    <header class="site-header" data-product="gemini" id="site-header">
+        <div class="site-content">
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // products
+                    var products_modal = new Modal('#site-modal-products'),
+                            products_nav = document.querySelector('#site-navigation-products');
+                    products_nav.addEventListener('click', function (event) {
+                        products_modal.open();
+                    });
+                    document.querySelector('#site-modal-products').addEventListener('click', function (event) {
+                        if (!event.target.hasAttribute('href') && !event.target.parentNode.hasAttribute('href')) {
+                            products_modal.close();
+                        }
+                    });
+
+                });
+            </script>
+
+            <nav class="site-navigation">
+                <div class="site-navigation-block">
+                    <a href="about.html" class="site-navigation-logo">
+                        <img src="static/img/logo.png" alt="#">
+                    </a>
+                </div>
+                <div class="site-navigation-block site-navigation-links">
+                    <div class="site-navigation-link site-navigation-link-dd" id="site-navigation-products">产品列表</div>
+                    <a class="site-navigation-link" href="consult.html">运维咨询</a>
+                    <a class="site-navigation-link" href="about.html">关于OneOaaS</a>
+                    <a class="site-navigation-link" href="contact.html">联系我们</a>
+                </div>
+            </nav>
+
+            <div class="modal-content" id="site-modal-products" style="width: 890px;">
+                <div class="modal-title">运维服务</div>
+                <div class="modal-grid">
+                    <div class="modal-grid-row">
+                        <div class="modal-grid-cell">
+                            <a href="framework.html" class="modal-grid-item">
+                                <img src="static/img/opsarch.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
+                                <span class="modal-products-name">运维架构</span>
+                            </a>
+                        </div>
+                        <div class="modal-grid-cell">
+                            <a href="service.html" class="modal-grid-item">
+                                <img src="static/img/opservice.jpg" width="300" height="180" class="modal-products-ico"
+                                     alt=""/>
+                                <span class="modal-products-name">运维服务</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal-grid-row">
+                        <div class="modal-grid-cell">
+                            <a href="tool.html" class="modal-grid-item">
+                                <img src="static/img/opstool.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
+                                <span class="modal-products-name">运维工具</span>
+                            </a>
+                        </div>
+                        <div class="modal-grid-cell">
+                            <a href="monitor.html" class="modal-grid-item">
+                                <img src="static/img/monitor.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
+                                <span class="modal-products-name">智能监控</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="header-products-gallery" data-carousel="index">
+            <body>
+            <div class="wrapper">
+                <div class="clearfix">
+                    <div class="header-products-gallery" data-carousel="index">
+                        <div class="header-products-gallery-items">
+                            <div class="header-products-gallery-item active" data-product="cleanmymac"
+                                 data-carousel-item style="  margin-top: -124px; margin-left: 150px">
+                                <div class="button" style="margin-top:-12px">
+                                    <div class="cols-2-layout-5">
+                                        <div>
+                                            <img src="static/img/consult.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button button-transparent" style=" margin-top: -3px">
+                                    <div class="cols-2-layout-50">
+                                        <div>
+                                            <h3>IT运维管理</h3>
+                                            <dl>
+                                                <dt>1 设备管理</dt>
+                                                <dd>对网络设备、服务器设备、</dd>
+                                                <dd>操作系统运行状况进行监控和管理。</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>2 应用服务</dt>
+                                                <dd>对各种应用支持软件如数据库、</dd>
+                                                <dd>中间件、群件以及各种通用或特定服务的监控管理,</dd>
+                                                <dd>如邮件系统、DNS、Web 等的监控与管理。</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>3 数据存储</dt>
+                                                <dd>对系统和业务数据进行统一存储、备份和恢复。</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>4 业务</dt>
+                                                <dd>包含对企业自身核.心业务系统运行情况的监控与管理,对于业务</dd>
+                                                <dd>的管理, 主要关注该业务系统的 CSF(关键成功因素 Critical</dd>
+                                                <dd>Success Factors)和KPI(关键绩效指 标Key Performance Indicators)。</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                window.os_correct = 1;
+            </script>
+
+            <div class="modal-overlay" id="modal-overlay">
+                <div class="modal" id="modal"></div>
+            </div>
+            </body>
+        </div>
+    </header>
+</div>
+</body>
+</html>

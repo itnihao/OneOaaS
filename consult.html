@@ -1,746 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>OneOaaS运维架构 运维服务 运维工具解决方案专家</title>
-
-    <link href='static/css/fonts.css' rel='stylesheet' type='text/css'>
-    <link href="static/css/core.css" rel="stylesheet"/>
-    <script src="static/js/jquery.js"></script>
-    <!--script src="static/js/ga_social_tracking.js"></script>
-    <script src="static/js/component.js"></script>
-    <script src="static/js/hires.js"></script-->
-    <script src="static/js/carousel.js"></script>
-    <script src="static/js/modal.js"></script>
-    <script src="static/js/download_popup.js"></script>
-    <script src="static/js/subscribe.js"></script>
-    <script src="static/js/banner.js"></script>
-    <link href="static/css/style.css" rel="stylesheet"/>
-    <script src="static/js/index.js"></script>
-</head>
-<div class="site-wrapper">
-
-<header class="site-header" data-product="gemini" id="site-header">
-<div class="site-content">
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // products
-            var products_modal = new Modal('#site-modal-products'),
-                    products_nav = document.querySelector('#site-navigation-products');
-            products_nav.addEventListener('click', function (event) {
+    <head>
+        <meta charset="UTF-8">
+        <title>OneOaaS运维架构 运维服务 运维工具解决方案专家</title>
+        <link href='static/css/fonts.css' rel='stylesheet' type='text/css'>
+        <link href="static/css/core.css" rel="stylesheet"/>
+        <script src="static/js/jquery.js"></script>
+        <!--script src="static/js/ga_social_tracking.js"></script>
+        <script src="static/js/component.js"></script>
+        <script src="static/js/hires.js"></script-->
+        <script src="static/js/carousel.js"></script>
+        <script src="static/js/modal.js"></script>
+        <script src="static/js/download_popup.js"></script>
+        <script src="static/js/subscribe.js"></script>
+        <script src="static/js/banner.js"></script>
+        <link href="static/css/style.css" rel="stylesheet"/>
+        <script src="static/js/index.js"></script>
+        <link href="http://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
+    </head>
+    <div class="site-wrapper">
+        <header class="site-header" data-product="gemini" id="site-header">
+            <div class="site-content">
+                <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                // products
+                var products_modal = new Modal('#site-modal-products'),
+                products_nav = document.querySelector('#site-navigation-products');
+                products_nav.addEventListener('click', function (event) {
                 products_modal.open();
-            });
-            document.querySelector('#site-modal-products').addEventListener('click', function (event) {
+                });
+                document.querySelector('#site-modal-products').addEventListener('click', function (event) {
                 if (!event.target.hasAttribute('href') && !event.target.parentNode.hasAttribute('href')) {
-                    products_modal.close();
+                products_modal.close();
                 }
-            });
-
-
-        });
-    </script>
-
-    <nav class="site-navigation">
-        <div class="site-navigation-block">
-            <a href="about.html" class="site-navigation-logo">
-                <img src="static/img/logo.png" alt="#">
-            </a>
-        </div>
-        <div class="site-navigation-block site-navigation-links">
-            <div class="site-navigation-link site-navigation-link-dd" id="site-navigation-products">产品列表</div>
-            <a class="site-navigation-link" href="consult.html">运维咨询</a>
-            <a class="site-navigation-link" href="about.html">关于OneOaaS</a>
-            <a class="site-navigation-link" href="contact.html">联系我们</a>
-        </div>
-    </nav>
-
-    <div class="modal-content" id="site-modal-products" style="width: 890px;">
-        <div class="modal-title">运维服务</div>
-        <div class="modal-grid">
-            <div class="modal-grid-row">
-                <div class="modal-grid-cell">
-                    <a href="framework.html" class="modal-grid-item">
-                        <img src="static/img/opsarch.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
-                        <span class="modal-products-name">运维架构</span>
-                    </a>
-                </div>
-                <div class="modal-grid-cell">
-                    <a href="service.html" class="modal-grid-item">
-                        <img src="static/img/opservice.jpg" width="300" height="180" class="modal-products-ico"
-                             alt=""/>
-                        <span class="modal-products-name">运维服务</span>
-                    </a>
-                </div>
-            </div>
-            <div class="modal-grid-row">
-                <div class="modal-grid-cell">
-                    <a href="tool.html" class="modal-grid-item">
-                        <img src="static/img/opstool.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
-                        <span class="modal-products-name">运维工具</span>
-                    </a>
-                </div>
-                <div class="modal-grid-cell">
-                    <a href="monitor.html" class="modal-grid-item">
-                        <img src="static/img/monitor.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
-                        <span class="modal-products-name">智能监控</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    window.os_correct = 1;
-</script>
-
-<div class="modal-overlay" id="modal-overlay">
-    <div class="modal" id="modal"></div>
-</div>
-
-<link rel="stylesheet" href="static/css/reset.css"/>
-<link rel="stylesheet" href="static/css/style2.css"/>
-
-<div class="nav-sec"></div>
-<div id="page" class="hfeed ustack-body" style="background:#0070B8 ">
-
-<div id="main" class="wrapper">
-<div id="primary">
-<div id="content" role="main" class="content-with-menu">
-<div class="term-wrapper" id="term-widget-126">
-    <div id="widget-4069" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">云主机</div>
-            <div class="widget-content"><p>UOS云主机服务是云计算中最基础的服务，基于OpenStack
-                Nova项目建设，承载了UOS云平台所有服务的计算业务。</p>
-
-                <p>
-                    比传统物理机更先进的是，UOS云主机可以实时添加或删除网卡、硬盘，更改主机CPU/内存等，也可以通过VNC终端在无网络的情况下管理虚拟机。在UOS中，创建和销毁一台云主机只需不到10秒钟，在关机状态超过30天前都不计费，实现真正的弹性按需计费。</p>
-            </div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/02/3.png');"></div>
-            <div class="widget-asides">
-                <div class="widget-aside">
-                    <div class="widget-aside-title">秒级部署</div>
-                    <div class="widget-aside-content">秒级创建，无需等待，海量计算资源瞬间获得；秒级备份，像Docker一样方便、灵活地备份。</div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">关机免费</div>
-                    <div class="widget-aside-content">关机30天内不收费，永远不需要为了节省费用而删除可能会再用得上的虚拟机。</div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">在线迁移</div>
-                    <div class="widget-aside-content">UOS存储采用高性能分布式存储系统可以实现云主机跨物理服务器安全地热迁移，保证云主机业务不中断。
+                });
+                });
+                </script>
+                <nav class="site-navigation">
+                    <div class="site-navigation-block">
+                        <a href="index.html" class="site-navigation-logo">
+                            <img src="static/img/logo.png" alt="#">
+                        </a>
+                    </div>
+                    <div class="site-navigation-block site-navigation-links">
+                        <div class="site-navigation-link site-navigation-link-dd" id="site-navigation-products">产品列表</div>
+                        <a class="site-navigation-link" href="consult.html">运维咨询</a>
+                        <a class="site-navigation-link" href="about.html">关于OneOaaS</a>
+                        <a class="site-navigation-link" href="contact.html">联系我们</a>
+                    </div>
+                </nav>
+                <div class="modal-content" id="site-modal-products" style="width: 890px;">
+                    <div class="modal-title">运维服务</div>
+                    <div class="modal-grid">
+                        <div class="modal-grid-row">
+                            <div class="modal-grid-cell">
+                                <a href="framework.html" class="modal-grid-item">
+                                    <img src="static/img/opsarch.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
+                                    <span class="modal-products-name">运维架构</span>
+                                </a>
+                            </div>
+                            <div class="modal-grid-cell">
+                                <a href="service.html" class="modal-grid-item">
+                                    <img src="static/img/opservice.jpg" width="300" height="180" class="modal-products-ico"
+                                    alt=""/>
+                                    <span class="modal-products-name">运维服务</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="modal-grid-row">
+                            <div class="modal-grid-cell">
+                                <a href="tool.html" class="modal-grid-item">
+                                    <img src="static/img/opstool.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
+                                    <span class="modal-products-name">运维工具</span>
+                                </a>
+                            </div>
+                            <div class="modal-grid-cell">
+                                <a href="monitor.html" class="modal-grid-item">
+                                    <img src="static/img/monitor.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
+                                    <span class="modal-products-name">智能监控</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-3701" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">VNC管理</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/01/云主机配图1.png');"></div>
-            <div class="widget-content"><p>虚拟机没有网络也照样可以管理。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4078" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">实时监控</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/02/云主机配图4.png');"></div>
-            <div class="widget-content"><p>
-                秒级实时创建云存储快照，备份云硬盘当前全部数据。快照之间没有依赖关系，删除任何时间点的快照都不会影响其它快照的使用。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4079" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">秒级备份</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/02/云主机快照.png');"></div>
-            <div class="widget-content"><p>挂载到云主机上的硬盘可以随时进行在线秒级扩容，无需进行线下操作，保证系统24×7运行。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-</div>
-<div class="term-wrapper" id="term-widget-85">
-    <div id="widget-4082" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">云硬盘</div>
-            <div class="widget-content"><p>UOS块存储服务为云主机提供持久化的云硬盘。云硬盘使用多重副本、实时复制的技术以保证您的数据安全、可靠。</p>
-
-                <p>分布式存储将您的数据保存在多台服务器上，即使有服务器发生故障，也不影响数据的可靠性和可用性，让您高枕无忧。</p>
-            </div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/02/2.png');"></div>
-            <div class="widget-asides">
-                <div class="widget-aside">
-                    <div class="widget-aside-title">稳定的I/O表现</div>
-                    <div class="widget-aside-content">性能稳定的系统存储I/O，提供高达 6000IOPS 及 170MB/s
-                        带宽，保证您的应用软件流畅运行。
+            <script>window.os_correct = 1;</script>
+        </header>
+        <body>
+            <div>
+                <div class="tabbable tabs-left" style="background:#0070B8">
+                    <ul class="nav nav-tabs">
+                        <li class=""><a href="#lA" data-toggle="tab">运维咨询</a></li>
+                        <li class="active"><a href="#lB" data-toggle="tab">架构设计</a></li>
+                        <li class=""><a href="#lC" data-toggle="tab">运维服务</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane" id="lA">
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                            <p>I'm in Section A.</p>
+                        </div>
+                        <div class="tab-pane active" id="lB">
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                            <p>Howdy, I'm in Section B.</p>
+                        </div>
+                        <div class="tab-pane" id="lC">
+                            <p>What up girl, this is Section C.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">按需按量支付</div>
-                    <div class="widget-aside-content">
-                        秒级操作秒级计费，按照您需要的云磁盘性能及实际使用时间进行费用支付，大量节省您的TCO总体拥有成本。
-                    </div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">克服业务尖峰</div>
-                    <div class="widget-aside-content">
-                        UnitedStack云硬盘先进的Burst功能允许用户短时间内突破QoS的限制，满足业务场景中瞬时IO风暴的要求。10GB的性能型云硬盘也可以有高达10,000~50,000的突发IOPS。
-                    </div>
-                </div>
+                </div> <!-- /tabbable -->
             </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-3704" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">高性能、SLA保证</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/01/高性能.png');"></div>
-            <div class="widget-content"><p>比传统物理服务器更高的磁盘性能，运行应用程序及大型数据库如行云流水。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4087" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">秒级备份、恢复</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/02/硬盘快照.png');"></div>
-            <div class="widget-content">
-                <div class="detail">
-                    <p>秒级实时创建云存储快照，备份云硬盘当前全部数据。快照之间没有依赖关系，删除任何时间点的快照都不会影响其它快照的使用。</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4089" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">实时弹性扩容</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/02/扩容1.png');"></div>
-            <div class="widget-content">
-                <div class="detail">挂载到云主机上的硬盘可以随时进行在线秒级扩容，无需进行线下操作，保证系统24&#215;7运行。</div>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4408" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">多机同时访问</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/多机挂载.png');"></div>
-            <div class="widget-content"><p>UOSCloud
-                块存储服务提供的共享盘允许单个卷同时挂载到多个虚拟机上，在块设备层提供并发访问能力，使得用户可以在共享盘上构造高可用的分布式应用。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4410" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">提供容量性硬盘</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/创建云硬盘.png');"></div>
-            <div class="widget-content"><p>为了满足用户大存储业务需求，UStack正式推出容量型云硬盘：容量可高达 5TB、价格更便宜、性能依然有
-                500IOPS、吞吐量 48MB/s。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-</div>
-<div class="term-wrapper" id="term-widget-86">
-    <div id="widget-4091" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">VDC网络</div>
-            <div class="widget-content"><p>UOS VDC虚拟网络服务是基于OpenStack
-                Neutron项目，您可以在可视化的界面中通过鼠标构建所需的基础设施，例如路由器、私有网络、VPN，真正实现软件定义网络，从此您不需再手动进行路由上架及捆绑网线。</p>
-            </div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/02/1.png');"></div>
-            <div class="widget-asides">
-                <div class="widget-aside">
-                    <div class="widget-aside-title">完全隔离的二层虚拟网络</div>
-                    <div class="widget-aside-content">真正实现二层隔离技术，不同租户之间网络封包不会互相影响，保100%网络安全隔离。</div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">简单直观的可视化操作</div>
-                    <div class="widget-aside-content">VDC虚拟网络服务中的所有操作将直接转化成SDN操作指令，助您1分钟设计好网络拓扑，并直接可用。
-                    </div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">支持跨网络迁移</div>
-                    <div class="widget-aside-content">云主机可以随时加入或离开任何一个网络，也可以同时绑定多个网络，方便构建满足业务需求的网络拓扑。
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-3706" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">所画即所得</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/01/拓扑.png');"></div>
-            <div class="widget-content"><p>无需动手，无需上架，画出您的网络架构，企业组网从未如此简单。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4097" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">创建私有网络</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/02/创建子网.png');"></div>
-            <div class="widget-content">
-                <div class="detail">界面简洁直观，动一下键盘就得到您想要的一切，包括：私有网络(Switch) 和 子网(VLAN)。</div>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4099" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">公网IP即绑即用</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/02/公网IP.png');"></div>
-            <div class="widget-content">
-                <div class="detail">只需动一下鼠标，即可为您的路由器或云主机分配公网IP，路由器及公网IP均实现按量秒级计费为您大量节省成本。</div>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-</div>
-<div class="term-wrapper" id="term-widget-110">
-    <div id="widget-4413" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">负载均衡</div>
-            <div class="widget-content"><p>为了提高用户服务的可用性和可扩展性，需要使用负载均衡服务；UOS提供了基于 TCP/HTTP
-                的负载均衡服务，可以避免用户投入虚拟机和人力的成本、让用户不关心LB的单点问题，且可直接通过API调用自动化操作。</p>
-            </div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/负载均衡-特性配图1.png');"></div>
-            <div class="widget-asides">
-                <div class="widget-aside">
-                    <div class="widget-aside-title">软件的灵活，硬件的性能</div>
-                    <div class="widget-aside-content">基于硬件级别的负载均衡实现方案，将负载均衡器放到离网络最近的地方，兼有软件的灵活与硬件的高效。
-                    </div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">超高可用性</div>
-                    <div class="widget-aside-content">基于应用的检查方式配合多种检查策略，实现最精准的健康状态检查功能，最大限度保证业务的高可用。
-                    </div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">多协议、多策略</div>
-                    <div class="widget-aside-content">
-                        支持TCP/HTTP等多种协议，支持轮询、最小连接数、源IP等多种负载均衡策略，满足各类业务场景的要求。
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4415" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">轻点鼠标、负载均衡</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/创建负载均衡.png');"></div>
-            <div class="widget-content"><p>
-                您可以只通过简单的鼠标点击操作，完成一个负载均衡器的创建，从而将业务负载平均的分配到多个云主机中，大幅度提高业务的服务能力和可用性。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4417" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">动态调配、按需增减</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/资源列表.png');"></div>
-            <div class="widget-content"><p>基于资源池化的负载均衡配置，业务主机可以动态的添加或移除，业务主机的状态与权重也可在线修改。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4419" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">健康检查、可知可控</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/创建资源池.png');"></div>
-            <div class="widget-content"><p>
-                健康检查可以采用多种方式，对应不同的负载均衡协议。每一个健康检查策略都可以根据业务应用制定不同的重试时间、重试次数以及判定状态异常的重试时间。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-</div>
-<div class="term-wrapper" id="term-widget-113">
-    <div id="widget-4423" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">共享文件服务</div>
-            <div class="widget-content"><p>
-                UOS国内首家提供了共享文件服务，专门针对传统企业级信息共享场景，满足企业内部文件共享需求，让您在云上同样拥有强大、可靠、稳定的NAS系统。</p>
-            </div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/共享文件服务-特性配图.png');"></div>
-            <div class="widget-asides">
-                <div class="widget-aside">
-                    <div class="widget-aside-title">支持多种标准协议</div>
-                    <div class="widget-aside-content">
-                        UOS共享文件服务通过NFS、CIFS等多种标准协议支持所有主流的操作系统，包括Linux、Windows和MacOS等。
-                    </div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">安全可靠</div>
-                    <div class="widget-aside-content">通过网络层面的隔离，UOS共享文件服务确保信息的安全，共享信息对于未授权的环境完全不可见。
-                    </div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">ACL权限支持</div>
-                    <div class="widget-aside-content">
-                        UOS共享文件服务提供基于IP的访问规则，让您可以轻松管理可使用共享的用户，适应复杂的企业级应用环境。【即将上线，敬请期待】
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-5277" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">独立的共享网络</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/06/创建共享网络2.png');"></div>
-            <div class="widget-content"><p>
-                文件共享将为之提供文件共享服务的私有网络及子网，共享网络由用户定义，文件共享服务仅工作在用户指定的共享网络所定义的私有网络中，在网络层面是与其他网络完全隔离的。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-5286" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">自定义文件共享</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/06/创建共享文件1.png');"></div>
-            <div class="widget-content"><p>
-                一个文件共享代表了一个共享文件夹，可以自定义每个文件共享的容量。文件共享服务通过共享网络实现网络隔离，因此要求用户必须绑定共享网络。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-5287" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">安全访问</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/06/添加访问规则1.png');"></div>
-            <div class="widget-content"><p>
-                为了保证安全，文件共享使用了白名单模式，可以为IPv4地址或者CIDR网段。因此所有能够访问文件共享的IP范围均由用户指定，非用户允许范围的IP地址均无法访问文件共享。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-</div>
-<div class="term-wrapper" id="term-widget-112">
-    <div id="widget-4422" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">关系型数据库（内测）</div>
-            <div class="widget-content"><p>
-                基于UOS高速统一存储构建的关系数据库服务，让您轻松拥有超高性能的关系型数据库系统。同时支持MySQL、PostgreSQL等多种数据库引擎，保障您已有系统可以完美兼容。</p>
-            </div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/关系型数据库-特性配图.png');"></div>
-            <div class="widget-asides">
-                <div class="widget-aside">
-                    <div class="widget-aside-title">轻松部署、简单维护，让您只需专注业务</div>
-                    <div class="widget-aside-content">
-                        UOS通过图形界面提供所有关系型数据库服务的操作，包括创建、启动、停止、扩容、删除、备份、恢复等，您可以通过界面完成所有运维操作，而不再需要理会复杂、繁琐的底层细节。
-                    </div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">超高性能轻松满足应用需求</div>
-                    <div class="widget-aside-content">
-                        UOS关系型数据库服务基于UOS高速统一存储系统构建，得益于UOS高速统一存储提供的强大性能，UOS关系型数据库提供远超传统单机数据库系统的性能，轻松满足大型业务应用的苛刻要求。
-                    </div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">定时备份保证数据高枕无忧</div>
-                    <div class="widget-aside-content">
-                        UOS提供基于快照的定时备份功能，将根据您制订的备份策略定时对数据库的完整内容进行备份，结合UOS高速统一存储的三副本真实落盘机制，保证您的再也无需为业务数据的安全担忧。
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-</div>
-<div class="term-wrapper" id="term-widget-111">
-    <div id="widget-4421" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">对象存储（内测）</div>
-            <div class="widget-content"><p>UOS对象存储（Object
-                Storage）是面向企业级应用和互联网服务推出的非结构化数据存储服务，为您提供安全、可靠、稳定的海量数据存储解决方案。</p>
-            </div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/对象存储-特性配图.png');"></div>
-            <div class="widget-asides">
-                <div class="widget-aside">
-                    <div class="widget-aside-title">海量存储，触手可得</div>
-                    <div class="widget-aside-content">
-                        UOS对象存储让您可以无需任何前期投入，立刻拥有PB级别的数据存储、分发、管理能力。您所需要的做的仅仅是将你的数据上传至UOS对象存储。
-                    </div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">弹性扩展、按需付费</div>
-                    <div class="widget-aside-content">
-                        您无需制订任何容量的规划，UOS对象存储是一个完全弹性可扩展的存储服务，您拥有无限的空间，并且您只需要为你所使用的数据服务付费。
-                    </div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">支持多种访问协议</div>
-                    <div class="widget-aside-content">UOS对象存储服务支持业界各类标准API，包括OpenStack Swift、Amazon
-                        S3等。您的数据及应用可以轻松构建，随处移动。
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-</div>
-<div class="term-wrapper" id="term-widget-114">
-    <div id="widget-4424" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">监控报警</div>
-            <div class="widget-content"><p>
-                包括CPU、内存、磁盘、网络等资源都实现了精细到分钟级的监控，每台云主机将产生超过10万条数据。当前UOS公有云中已经保存了数以十亿的云主机监控数据，每台云主机的监控数据可以在2秒钟内进行定位并展现。同时UOS设计团队精心设计的配置面板让用户可以按以往性能表现，针对个性化需求定义报警阀值，让您安枕无忧。</p>
-            </div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/监控报警-特性配图.png');"></div>
-            <div class="widget-asides">
-                <div class="widget-aside">
-                    <div class="widget-aside-title">多种指标任意组合</div>
-                    <div class="widget-aside-content">多项指标交叉组合，构建适合自己业务的监控规则，最大限度避免漏报、误报，保证业务可知可控。</div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">细粒度监控，精确到分钟</div>
-                    <div class="widget-aside-content">提供最小一分钟，最长一个月的监控记录，提供基于不同颗粒度的可视化显示方式，资源使用情况一目了然。
-                    </div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">短信邮件，随时随地</div>
-                    <div class="widget-aside-content">各项报警均可采用邮箱或短信的形式发送，让您随时随地获取最新信息，对业务情况安心、放心。</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4425" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">快速定位监控指标</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/jkbj1.png');"></div>
-            <div class="widget-content"><p>提供了“过滤”和“搜索”两种方式用来快速定位监控指标，可以方便的在大量监控指标中找到您所关心的。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4427" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">灵活定义报警规则</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/jkbj2.png');"></div>
-            <div class="widget-content"><p>
-                对于每个报警规则，都可以定义对应的阈值、周期和周期数。报警阈值的依据有三个值可以选择：平均值，最大值，最小值，平均值适用于大多数情况，最大值可以用来对峰值进行监控，最小值反之。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4429" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">三种报警状态满足不同场景</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/jkbj3.png');"></div>
-            <div class="widget-content"><p>每一个报警提供三种状态：正常状态、报警状态、数据不足。覆盖所监控指标的所有情况，方便运维人员及时排查问题。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-</div>
-<div class="term-wrapper" id="term-widget-115">
-    <div id="widget-4433" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">子账号与协作</div>
-            <div class="widget-content"><p>UOS
-                子账户体系为企业级用户提供更精确的项目和帐号权限控制，包括可读，修改，支付等。同时，用户协作为多账户共同管理项目等使用场景提供了支持。</p>
-            </div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/子账号与协作-特性配图.png');"></div>
-            <div class="widget-asides">
-                <div class="widget-aside">
-                    <div class="widget-aside-title">管理难题，一朝得解</div>
-                    <div class="widget-aside-content">
-                        子账户系统以项目作为资源集合，以角色作为用户权限的基础，解决企业部门层级复杂、沟通困难的问题，大幅度提高了企业内部的协作效率。
-                    </div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">项目管理，尽在指尖</div>
-                    <div class="widget-aside-content">
-                        基于项目的管理方法，使资源消耗更加清晰，使账户的权限更加明确。项目所有者与账单支付者相分离，匹配当代企业财务与业务相分离的管理模式。
-                    </div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">用户协作，轻松应对</div>
-                    <div class="widget-aside-content">通过邀请其他账户参与项目实现资源同享；通过划分账户的项目角色，实现明确账户的权限。</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4442" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">账户操作的一站式服务</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/创建用户.png');"></div>
-            <div class="widget-content"><p>主账户通过图形界面即可以完成所有子账户的操作，包括创建、编辑、禁用及删除。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4444" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">账单支付者与项目所有者分离，符合企业级项目管理模式</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/创建项目1.png');"></div>
-            <div class="widget-content"><p>
-                项目管理者拥有项目内资源的全部权限，可以管理当前项目的资源，包括查看、新增、删除、修改资源，如创建项目后可指定项目所有者和账单支付者；同时项目管理者也可创建多个项目来管理不同项目中的资源及用户权限。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4446" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">基于邀请的用户协作</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/邀请用户.png');"></div>
-            <div class="widget-content"><p>
-                项目拥有者通过用户协作功能可以邀请其他域的用户（包括主账户和子账户）参与到项目中，并根据需求赋予项目管理者或者项目观察者的权限。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-</div>
-<div class="term-wrapper" id="term-widget-116">
-    <div id="widget-4436" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">Full API Support</div>
-            <div class="widget-content"><p>
-                不论是Web控制台还是命令行工具，还是内部的自动化运维系统，一切都是以API为中心的，并且完全开放所有的API给UOS用户。UOS公有云 提供UOS API文档、基于UOS
-                API的Web控制台和命令行工具(CLI)。</p>
-            </div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/Full-API-Support-特性配图.png');"></div>
-            <div class="widget-asides">
-                <div class="widget-aside">
-                    <div class="widget-aside-title">一切都是API，API就是一切</div>
-                    <div class="widget-aside-content">
-                        认证、计算、存储、网络……所用模块基于API设计、所有功能面向API实现。您所想所需，皆可通过API获取。
-                    </div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">完全兼容OpenStack上游原生API</div>
-                    <div class="widget-aside-content">
-                        UOS源于OpenStack，高于OpenStack。完全兼容OpenStack的API保证您所有基于OpenStack的资产全部可以零成本迁移。如果您已是OpenStack专家，那么，一切都不是问题。
-                    </div>
-                </div>
-                <div class="widget-aside">
-                    <div class="widget-aside-title">文档、实例、教程，一个都不能少</div>
-                    <div class="widget-aside-content">完善的文档、简明的实例、通俗易懂的教程，让您轻松上手，高枕无忧。</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4437" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">全面完备的文档</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/FAS配图1.png');"></div>
-            <div class="widget-content"><p>
-                目前UOS所有服务对应的API都已提供完善的API文档，包含该服务相关API的概要描述，请求响应格式以及对应的样例。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4439" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">简明高效的教程</div>
-            <div class="thumbnail"
-                 style="background-image: url('https://www.ustack.com/wp-content/uploads/2015/03/FAS配图2.png');"></div>
-            <div class="widget-content"><p>快速入门教程以一个简单的任务为例，深入浅出的描述了使用API操作云服务的全部流程，是快速上手API的最佳途径。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-    <div id="widget-4441" class="block type-widget">
-        <div class="container">
-            <div class="widget-title">提供CLI客户端</div>
-            <div class="widget-content"><p>基于OpenStack官方CLI实现的客户端，完善大量内容，屏蔽了管理的复杂性，避免了用户的困惑。</p>
-            </div>
-        </div>
-    </div>
-    <!-- #post -->
-</div>
-
-
-<div class="menu-wrapper">
-
-    <div class="level-three-groups  no-scroll">
-        <div class="level-three-menu"><a href="javascript:;" class="menu-terms">基础服务<i>+</i><i>-</i></a>
-
-            <div class="sub-menu-terms"><a href="javascript:;" data-id="126"
-                                           class="sub-menu-term">云主机</a><a href="javascript:;"
-                                                                           data-id="85"
-                                                                           class="sub-menu-term">云硬盘</a><a
-                    href="javascript:;" data-id="86" class="sub-menu-term">VDC网络</a></div>
-        </div>
-        <div class="level-three-menu"><a href="javascript:;" class="menu-terms">应用服务<i>+</i><i>-</i></a>
-
-            <div class="sub-menu-terms"><a href="javascript:;" data-id="110"
-                                           class="sub-menu-term">负载均衡</a><a href="javascript:;"
-                                                                            data-id="113"
-                                                                            class="sub-menu-term">文件共享</a><a
-                    href="javascript:;" data-id="112" class="sub-menu-term">关系型数据库</a><a
-                    href="javascript:;" data-id="111" class="sub-menu-term">对象存储</a></div>
-        </div>
-        <div class="level-three-menu"><a href="javascript:;" class="menu-terms">运维服务<i>+</i><i>-</i></a>
-
-            <div class="sub-menu-terms"><a href="javascript:;" data-id="114"
-                                           class="sub-menu-term">监控报警</a><a href="javascript:;"
-                                                                            data-id="115"
-                                                                            class="sub-menu-term">子账号与协作</a><a
-                    href="javascript:;" data-id="116" class="sub-menu-term">Full API Support</a></div>
-        </div>
-    </div>
-</div>
-
-
-</div>
-<!-- #content -->
-</div>
-<!-- #primary -->
-</div>
-</div>
-<a href="javascript:;" class="backToTop hide"></a>
-<script src="static/js/global.js"></script>
-
-</header>
-</div>
-</body>
+            <script src="static/js/jquery.min.js"></script>
+            <script src="static/js/bootstrap.min.js"></script>
+    </body>
 </html>

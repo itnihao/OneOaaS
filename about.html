@@ -1,332 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>OneOaaS运维架构 运维服务 运维工具解决方案专家</title>
-
-    <link href='static/css/fonts.css' rel='stylesheet' type='text/css'>
-    <link href="static/css/core.css" rel="stylesheet"/>
-    <script src="static/js/jquery.js"></script>
-    <!--script src="static/js/ga_social_tracking.js"></script>
-    <script src="static/js/component.js"></script>
-    <script src="static/js/hires.js"></script-->
-    <script src="static/js/carousel.js"></script>
-    <script src="static/js/modal.js"></script>
-    <script src="static/js/download_popup.js"></script>
-    <script src="static/js/subscribe.js"></script>
-    <script src="static/js/banner.js"></script>
-    <link href="static/css/style.css" rel="stylesheet"/>
-    <script src="static/js/index.js"></script>
-    <!-- GA begin -->
-
-<body>
-
-
-<div class="site-wrapper">
-
-<header class="site-header" data-product="gemini" id="site-header">
-<div class="site-content">
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // products
-            var products_modal = new Modal('#site-modal-products'),
+    <head>
+        <meta charset="UTF-8">
+        <title>OneOaaS运维架构 运维服务 运维工具解决方案专家</title>
+        <link href='static/css/fonts.css' rel='stylesheet' type='text/css'>
+        <link href="static/css/core.css" rel="stylesheet"/>
+        <script src="static/js/jquery.js"></script>
+        <!--script src="static/js/ga_social_tracking.js"></script>
+        <script src="static/js/component.js"></script>
+        <script src="static/js/hires.js"></script-->
+        <script src="static/js/carousel.js"></script>
+        <script src="static/js/modal.js"></script>
+        <script src="static/js/download_popup.js"></script>
+        <script src="static/js/subscribe.js"></script>
+        <script src="static/js/banner.js"></script>
+        <link href="static/css/style.css" rel="stylesheet"/>
+        <script src="static/js/index.js"></script>
+    </head>
+    <body>
+        <div class="site-wrapper">
+            <header class="site-header" data-product="gemini" id="site-header">
+                <div class="site-content">
+                    <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                    // products
+                    var products_modal = new Modal('#site-modal-products'),
                     products_nav = document.querySelector('#site-navigation-products');
-            products_nav.addEventListener('click', function (event) {
-                products_modal.open();
-            });
-            document.querySelector('#site-modal-products').addEventListener('click', function (event) {
-                if (!event.target.hasAttribute('href') && !event.target.parentNode.hasAttribute('href')) {
+                    products_nav.addEventListener('click', function (event) {
+                    products_modal.open();
+                    });
+                    document.querySelector('#site-modal-products').addEventListener('click', function (event) {
+                    if (!event.target.hasAttribute('href') && !event.target.parentNode.hasAttribute('href')) {
                     products_modal.close();
-                }
-            });
-        });
-    </script>
-
-    <nav class="site-navigation">
-        <div class="site-navigation-block">
-            <a href="index.html" class="site-navigation-logo">
-                <img src="static/img/logo.png" alt="#">
-            </a>
-        </div>
-        <div class="site-navigation-block site-navigation-links">
-            <a class="site-navigation-link" href="index.html">首页</a>
-            <div class="site-navigation-link site-navigation-link-dd" id="site-navigation-products">产品列表</div>
-            <a class="site-navigation-link" href="sulotion.html">解决方案</a>
-            <a class="site-navigation-link" href="partner.html">合作伙伴</a>
-            <a class="site-navigation-link" href="#">公司介绍</a>
-        </div>
-    </nav>
-
-            <div class="modal-content" id="site-modal-products" style="width: 890px;">
-                <div class="modal-title">运维服务</div>
-                <div class="modal-grid">
-                    <div class="modal-grid-row">
-                        <div class="modal-grid-cell">
-                            <a href="sulotion.html" class="modal-grid-item">
-                                <img src="static/img/opsarch.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
-                                <span class="modal-products-name">运维架构</span>
+                    }
+                    });
+                    });
+                    </script>
+                    <nav class="site-navigation">
+                        <div class="site-navigation-block">
+                            <a href="index.html" class="site-navigation-logo">
+                                <img src="static/img/logo.png" alt="#">
                             </a>
                         </div>
-                        <div class="modal-grid-cell">
-                            <a href="sulotion.html" class="modal-grid-item">
-                                <img src="static/img/opservice.jpg" width="300" height="180" class="modal-products-ico"
-                                     alt=""/>
-                                <span class="modal-products-name">运维服务</span>
-                            </a>
+                        <div class="site-navigation-block site-navigation-links">
+                            <a class="site-navigation-link" href="index.html">首页</a>
+                            <div class="site-navigation-link site-navigation-link-dd" id="site-navigation-products">产品列表</div>
+                            <a class="site-navigation-link" href="sulotion.html">解决方案</a>
+                            <a class="site-navigation-link" href="partner.html">合作伙伴</a>
+                            <a class="site-navigation-link" href="#">公司介绍</a>
                         </div>
-                    </div>
-                    <div class="modal-grid-row">
-                        <div class="modal-grid-cell">
-                            <a href="partner.html" class="modal-grid-item">
-                                <img src="static/img/opstool.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
-                                <span class="modal-products-name">开源工具</span>
-                            </a>
-                        </div>
-                        <div class="modal-grid-cell">
-                            <a href="tool.html" class="modal-grid-item">
-                                <img src="static/img/monitor.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
-                                <span class="modal-products-name">自研工具</span>
-                            </a>
+                    </nav>
+                    <div class="modal-content" id="site-modal-products" style="width: 890px;">
+                        <div class="modal-title">运维服务</div>
+                        <div class="modal-grid">
+                            <div class="modal-grid-row">
+                                <div class="modal-grid-cell">
+                                    <a href="sulotion.html" class="modal-grid-item">
+                                        <img src="static/img/opsarch.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
+                                        <span class="modal-products-name">运维架构</span>
+                                    </a>
+                                </div>
+                                <div class="modal-grid-cell">
+                                    <a href="sulotion.html" class="modal-grid-item">
+                                        <img src="static/img/opservice.jpg" width="300" height="180" class="modal-products-ico"
+                                        alt=""/>
+                                        <span class="modal-products-name">运维服务</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="modal-grid-row">
+                                <div class="modal-grid-cell">
+                                    <a href="partner.html" class="modal-grid-item">
+                                        <img src="static/img/opstool.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
+                                        <span class="modal-products-name">开源工具</span>
+                                    </a>
+                                </div>
+                                <div class="modal-grid-cell">
+                                    <a href="tool.html" class="modal-grid-item">
+                                        <img src="static/img/monitor.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
+                                        <span class="modal-products-name">自研工具</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-</div>
-<div class="header-products-gallery" data-carousel="index">
-<body>
-<div class="wrapper">
-    <div class="clearfix">
-        <div class="header-products-gallery" data-carousel="index">
-            <div class="header-products-gallery-items">
-                <div class="header-products-gallery-item active" data-product="cleanmymac"
-                     data-carousel-item style="  margin-top: -124px; margin-left: 150px">
-
-                    <div class="button" style="margin-top:-12px">
-                        <div class="cols-2-layout-5">
-                            <div>
-                                <style type="text/css">
-                                    html, body {
-                                        margin: 0;
-                                        padding: 0;
-                                    }
-
-                                    .iw_poi_title {
-                                        color: #CC5522;
-                                        font-size: 14px;
-                                        font-weight: bold;
-                                        overflow: hidden;
-                                        padding-right: 13px;
-                                        white-space: nowrap
-                                    }
-
-                                    .iw_poi_content {
-                                        font: 12px arial, sans-serif;
-                                        overflow: visible;
-                                        padding-top: 4px;
-                                        white-space: -moz-pre-wrap;
-                                        word-wrap: break-word
-                                    }
-                                </style>
-                                <script type="text/javascript"
-                                        src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
-
-
-                                <body>
-                                <!--百度地图容器-->
-                                <div style="width:453px;height:450px;border:#ccc solid 1px;"
-                                     id="dituContent"></div>
-                                </body>
-                                <script type="text/javascript">
-                                    //创建和初始化地图函数：
-                                    function initMap() {
-                                        createMap();//创建地图
-                                        setMapEvent();//设置地图事件
-                                        addMapControl();//向地图添加控件
-                                        addMarker();//向地图中添加marker
-                                    }
-
-                                    //创建地图函数：
-                                    function createMap() {
-                                        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-                                        var point = new BMap.Point(121.397474, 31.240167);//定义一个中心点坐标
-                                        map.centerAndZoom(point, 17);//设定地图的中心点和坐标并将地图显示在地图容器中
-                                        window.map = map;//将map变量存储在全局
-                                    }
-
-                                    //地图事件设置函数：
-                                    function setMapEvent() {
-                                        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
-                                        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
-                                        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
-                                        map.enableKeyboard();//启用键盘上下左右键移动地图
-                                    }
-
-                                    //地图控件添加函数：
-                                    function addMapControl() {
-                                        //向地图中添加缩放控件
-                                        var ctrl_nav = new BMap.NavigationControl({
-                                            anchor: BMAP_ANCHOR_TOP_LEFT,
-                                            type: BMAP_NAVIGATION_CONTROL_LARGE
-                                        });
-                                        map.addControl(ctrl_nav);
-                                        //向地图中添加缩略图控件
-                                        var ctrl_ove = new BMap.OverviewMapControl({
-                                            anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
-                                            isOpen: 1
-                                        });
-                                        map.addControl(ctrl_ove);
-                                        //向地图中添加比例尺控件
-                                        var ctrl_sca = new BMap.ScaleControl({anchor: BMAP_ANCHOR_BOTTOM_LEFT});
-                                        map.addControl(ctrl_sca);
-                                    }
-
-                                    //标注点数组
-                                    var markerArr = [{
-                                        title: "天地软件园",
-                                        content: "上海市普陀区中江路879号天地软件园28号407室",
-                                        point: "121.397259|31.240036",
-                                        isOpen: 0,
-                                        icon: {w: 23, h: 25, l: 46, t: 21, x: 9, lb: 12}
-                                    }
-                                    ];
-                                    //创建marker
-                                    function addMarker() {
-                                        for (var i = 0; i < markerArr.length; i++) {
-                                            var json = markerArr[i];
-                                            var p0 = json.point.split("|")[0];
-                                            var p1 = json.point.split("|")[1];
-                                            var point = new BMap.Point(p0, p1);
-                                            var iconImg = createIcon(json.icon);
-                                            var marker = new BMap.Marker(point, {icon: iconImg});
-                                            var iw = createInfoWindow(i);
-                                            var label = new BMap.Label(json.title, {"offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20)});
-                                            marker.setLabel(label);
-                                            map.addOverlay(marker);
-                                            label.setStyle({
-                                                borderColor: "#808080",
-                                                color: "#333",
-                                                cursor: "pointer"
-                                            });
-
-                                            (function () {
-                                                var index = i;
-                                                var _iw = createInfoWindow(i);
-                                                var _marker = marker;
-                                                _marker.addEventListener("click", function () {
+                <div class="header-products-gallery" data-carousel="index">
+                    <div class="wrapper">
+                        <div class="clearfix">
+                            <div class="header-products-gallery" data-carousel="index">
+                                <div class="header-products-gallery-items">
+                                    <div class="header-products-gallery-item active" data-product="oneoaas"
+                                        data-carousel-item style="  margin-top: -124px; margin-left: 150px">
+                                        <div>
+                                        <a>
+                                        OneOaaS拥有一批多年在核心业务系统打拼的资深老兵，他们是一群狂热的技术专家，对各行业务理解透彻，</br>
+                                        能够快速解决客户当下疑难，高效帮助客户规避未来可能发生的故障，借助技术和经验降低成本，我们的团队</br>
+                                        价值远大于您所想。</br>
+                                           我们积极倡导并遵循开源精神，经过多年数据库软件项目的历练，建立了成熟的项目规划、实施与交付体系，</br>
+                                        能够为用户提供包括解决方案、架构设计、测试、实施、上线、运维、培训在内的一站式服务。</br>
+                                        </a>
+                                        </div>
+                                        <div class="button" style="margin-top:-12px">
+                                            <div class="cols-2-layout-5">
+                                                <div>
+                                                    <style type="text/css">
+                                                    html, body {
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    }
+                                                    .iw_poi_title {
+                                                    color: #CC5522;
+                                                    font-size: 14px;
+                                                    font-weight: bold;
+                                                    overflow: hidden;
+                                                    padding-right: 13px;
+                                                    white-space: nowrap
+                                                    }
+                                                    .iw_poi_content {
+                                                    font: 12px arial, sans-serif;
+                                                    overflow: visible;
+                                                    padding-top: 4px;
+                                                    white-space: -moz-pre-wrap;
+                                                    word-wrap: break-word
+                                                    }
+                                                    </style>
+                                                    <script type="text/javascript"
+                                                    src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+                                                    <body>
+                                                        <!--百度地图容器-->
+                                                        <div style="width:453px;height:450px;border:#ccc solid 1px;"
+                                                        id="dituContent"></div>
+                                                    </body>
+                                                    <script type="text/javascript">
+                                                    //创建和初始化地图函数：
+                                                    function initMap() {
+                                                    createMap();//创建地图
+                                                    setMapEvent();//设置地图事件
+                                                    addMapControl();//向地图添加控件
+                                                    addMarker();//向地图中添加marker
+                                                    }
+                                                    //创建地图函数：
+                                                    function createMap() {
+                                                    var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+                                                    var point = new BMap.Point(121.397474, 31.240167);//定义一个中心点坐标
+                                                    map.centerAndZoom(point, 17);//设定地图的中心点和坐标并将地图显示在地图容器中
+                                                    window.map = map;//将map变量存储在全局
+                                                    }
+                                                    //地图事件设置函数：
+                                                    function setMapEvent() {
+                                                    map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+                                                    map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+                                                    map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+                                                    map.enableKeyboard();//启用键盘上下左右键移动地图
+                                                    }
+                                                    //地图控件添加函数：
+                                                    function addMapControl() {
+                                                    //向地图中添加缩放控件
+                                                    var ctrl_nav = new BMap.NavigationControl({
+                                                    anchor: BMAP_ANCHOR_TOP_LEFT,
+                                                    type: BMAP_NAVIGATION_CONTROL_LARGE
+                                                    });
+                                                    map.addControl(ctrl_nav);
+                                                    //向地图中添加缩略图控件
+                                                    var ctrl_ove = new BMap.OverviewMapControl({
+                                                    anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+                                                    isOpen: 1
+                                                    });
+                                                    map.addControl(ctrl_ove);
+                                                    //向地图中添加比例尺控件
+                                                    var ctrl_sca = new BMap.ScaleControl({anchor: BMAP_ANCHOR_BOTTOM_LEFT});
+                                                    map.addControl(ctrl_sca);
+                                                    }
+                                                    //标注点数组
+                                                    var markerArr = [{
+                                                    title: "天地软件园",
+                                                    content: "上海市普陀区中江路879号天地软件园28号407室",
+                                                    point: "121.397259|31.240036",
+                                                    isOpen: 0,
+                                                    icon: {w: 23, h: 25, l: 46, t: 21, x: 9, lb: 12}
+                                                    }
+                                                    ];
+                                                    //创建marker
+                                                    function addMarker() {
+                                                    for (var i = 0; i < markerArr.length; i++) {
+                                                    var json = markerArr[i];
+                                                    var p0 = json.point.split("|")[0];
+                                                    var p1 = json.point.split("|")[1];
+                                                    var point = new BMap.Point(p0, p1);
+                                                    var iconImg = createIcon(json.icon);
+                                                    var marker = new BMap.Marker(point, {icon: iconImg});
+                                                    var iw = createInfoWindow(i);
+                                                    var label = new BMap.Label(json.title, {"offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20)});
+                                                    marker.setLabel(label);
+                                                    map.addOverlay(marker);
+                                                    label.setStyle({
+                                                    borderColor: "#808080",
+                                                    color: "#333",
+                                                    cursor: "pointer"
+                                                    });
+                                                    (function () {
+                                                    var index = i;
+                                                    var _iw = createInfoWindow(i);
+                                                    var _marker = marker;
+                                                    _marker.addEventListener("click", function () {
                                                     this.openInfoWindow(_iw);
-                                                });
-                                                _iw.addEventListener("open", function () {
+                                                    });
+                                                    _iw.addEventListener("open", function () {
                                                     _marker.getLabel().hide();
-                                                })
-                                                _iw.addEventListener("close", function () {
+                                                    })
+                                                    _iw.addEventListener("close", function () {
                                                     _marker.getLabel().show();
-                                                })
-                                                label.addEventListener("click", function () {
+                                                    })
+                                                    label.addEventListener("click", function () {
                                                     _marker.openInfoWindow(_iw);
-                                                })
-                                                if (!!json.isOpen) {
+                                                    })
+                                                    if (!!json.isOpen) {
                                                     label.hide();
                                                     _marker.openInfoWindow(_iw);
-                                                }
-                                            })()
-                                        }
-                                    }
-                                    //创建InfoWindow
-                                    function createInfoWindow(i) {
-                                        var json = markerArr[i];
-                                        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>" + json.content + "</div>");
-                                        return iw;
-                                    }
-                                    //创建一个Icon
-                                    function createIcon(json) {
-                                        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w, json.h), {
-                                            imageOffset: new BMap.Size(-json.l, -json.t),
-                                            infoWindowOffset: new BMap.Size(json.lb + 5, 1),
-                                            offset: new BMap.Size(json.x, json.h)
-                                        })
-                                        return icon;
-                                    }
-
-                                    initMap();//创建和初始化地图
-                                </script>
+                                                    }
+                                                    })()
+                                                    }
+                                                    }
+                                                    //创建InfoWindow
+                                                    function createInfoWindow(i) {
+                                                    var json = markerArr[i];
+                                                    var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>" + json.content + "</div>");
+                                                    return iw;
+                                                    }
+                                                    //创建一个Icon
+                                                    function createIcon(json) {
+                                                    var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w, json.h), {
+                                                    imageOffset: new BMap.Size(-json.l, -json.t),
+                                                    infoWindowOffset: new BMap.Size(json.lb + 5, 1),
+                                                    offset: new BMap.Size(json.x, json.h)
+                                                    })
+                                                    return icon;
+                                                    }
+                                                    initMap();//创建和初始化地图
+                                                    </script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="button button-transparent" style=" margin-top: -3px">
+                                            <div class="cols-2-layout-50">
+                                                <div>
+                                                    <h3>上海浩西信息技术有限公司</h3>
+                                                    <dl>
+                                                        <dt>上海</dt>
+                                                        <dd>电话：021-60904796 邮箱：sales@oneoass.com</dd>
+                                                        <dd>地址：上海市普陀区中江路879号天地软件园28号407室</dd>
+                                                        <dd>邮编：200011</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>深圳分公司</dt>
+                                                        <dd>电话：0755-82563230</dd>
+                                                        <dd>地址：深圳市福田中心区彩田路星河世纪大厦B栋311e</dd>
+                                                        <dd>邮编：200011</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="button button-transparent" style=" margin-top: -3px">
-                        <div class="cols-2-layout-50">
-                            <div>
-                                <h3>上海浩西信息技术有限公司</h3>
-                                <dl>
-                                    <dt>上海</dt>
-                                    <dd>电话：021-60904796 邮箱：sales@oneoass.com</dd>
-                                    <dd>地址：上海市普陀区中江路879号天地软件园28号407室</dd>
-                                    <dd>邮编：200011</dd>
-                                </dl>
-                                <dl>
-                                    <dt>深圳分公司</dt>
-                                    <dd>电话：0755-82563230</dd>
-                                    <dd>地址：深圳市福田中心区彩田路星河世纪大厦B栋311e</dd>
-                                    <dd>邮编：200011</dd>
-                                </dl>
-                            </div>
-                        </div>
+                    <div class="modal-overlay" id="modal-overlay">
+                        <div class="modal" id="modal"></div>
                     </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="modal-overlay" id="modal-overlay">
-    <div class="modal" id="modal"></div>
-</div>
-
-
-<script type="text/javascript">
-    var CookieEventsTracker = function () {
-        this.trackEvent();
-        this.mutationObserve();
-    };
-    CookieEventsTracker.prototype.trackEvent = function () {
-        var tmpCookieProf = decodeURIComponent(component.getCookie('tmpp'));
-        if (tmpCookieProf) {
-            var cookieData = JSON.parse(tmpCookieProf);
-            for (var action in cookieData) {
-                var actionLabels = cookieData[action].split(',');
-                for (i = 0; i < actionLabels.length; i++) {
+                    <script type="text/javascript">
+                    var CookieEventsTracker = function () {
+                    this.trackEvent();
+                    this.mutationObserve();
+                    };
+                    CookieEventsTracker.prototype.trackEvent = function () {
+                    var tmpCookieProf = decodeURIComponent(component.getCookie('tmpp'));
+                    if (tmpCookieProf) {
+                    var cookieData = JSON.parse(tmpCookieProf);
+                    for (var action in cookieData) {
+                    var actionLabels = cookieData[action].split(',');
+                    for (i = 0; i < actionLabels.length; i++) {
                     _gaq.push(['_trackEvent', 'Cookie Profiling', action, actionLabels[i], , true]);
-                }
-            }
-            component.remCookie('tmpp');
-        }
-    };
-    CookieEventsTracker.prototype.mutationObserve = function () {
-        var self = this;
-        var target = document.querySelector('body');
-        var config = {attributes: true, childList: true, characterData: true, subtree: true};
-        var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
-        if (MutationObserver) {
-            var observer = new MutationObserver(function (mutations) {
-                mutations.forEach(function (mutation) {
+                    }
+                    }
+                    component.remCookie('tmpp');
+                    }
+                    };
+                    CookieEventsTracker.prototype.mutationObserve = function () {
+                    var self = this;
+                    var target = document.querySelector('body');
+                    var config = {attributes: true, childList: true, characterData: true, subtree: true};
+                    var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+                    if (MutationObserver) {
+                    var observer = new MutationObserver(function (mutations) {
+                    mutations.forEach(function (mutation) {
                     self.trackEvent();
-                });
-            });
-            observer.observe(target, config);
-        }
-    };
-    document.addEventListener('DOMContentLoaded', function () {
-        new CookieEventsTracker();
-    });
-
-</script>
-
-</body>
-</div>
-</header>
-</div>
-</body>
+                    });
+                    });
+                    observer.observe(target, config);
+                    }
+                    };
+                    document.addEventListener('DOMContentLoaded', function () {
+                    new CookieEventsTracker();
+                    });
+                    </scrip
+                </div>
+            </header>
+        </div>
+    </body>
 </html>

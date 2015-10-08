@@ -1,7 +1,7 @@
 .site-header {
     -webkit-transition: .4s background ease-in-out;
     transition: .4s background ease-in-out; }
-.site-header[data-product="cleanmymac"] {
+.site-header[data-product="oneoaas"] {
     background: #0070B8; }
 .site-header[data-product="gemini"] {
     background: #0070B8 }

@@ -18,18 +18,16 @@
     <link rel="stylesheet" href="static/css/style.css"/>
     <script src="static/js/index.js"></script>
 </head>
+
 <body>
-
 <div class="site-wrapper">
-
-    <header class="site-header" data-product="cleanmymac" id="site-header">
+    <header class="site-header" data-product="oneoaas" id="site-header">
         <div class="site-content">
-
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     // products
                     var products_modal = new Modal('#site-modal-products'),
-                            products_nav = document.querySelector('#site-navigation-products');
+                        products_nav = document.querySelector('#site-navigation-products');
                     products_nav.addEventListener('click', function (event) {
                         products_modal.open();
                     });

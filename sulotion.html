@@ -6,81 +6,54 @@
         <link href='static/css/fonts.css' rel='stylesheet' type='text/css'>
         <link href="static/css/core.css" rel="stylesheet"/>
         <script src="static/js/jquery.js"></script>
-        <!--script src="static/js/ga_social_tracking.js"></script>
-        <script src="static/js/component.js"></script>
-        <script src="static/js/hires.js"></script-->
-        <script src="static/js/carousel.js"></script>
-        <script src="static/js/modal.js"></script>
-        <script src="static/js/download_popup.js"></script>
-        <script src="static/js/subscribe.js"></script>
-        <script src="static/js/banner.js"></script>
         <link href="static/css/style.css" rel="stylesheet"/>
-        <script src="static/js/index.js"></script>
-        <link href="http://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
-        <link href="http://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="static/css/bootstrap-responsive.min.css" rel="stylesheet">
     </head>
-    <div class="site-wrapper">
-        <header class="site-header" data-product="gemini" id="site-header">
-            <div class="site-content">
-                <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                // products
-                var products_modal = new Modal('#site-modal-products'),
-                products_nav = document.querySelector('#site-navigation-products');
-                products_nav.addEventListener('click', function (event) {
-                products_modal.open();
-                });
-                document.querySelector('#site-modal-products').addEventListener('click', function (event) {
-                if (!event.target.hasAttribute('href') && !event.target.parentNode.hasAttribute('href')) {
-                products_modal.close();
-                }
-                });
-                });
-                </script>
-                <nav class="site-navigation">
-                    <div class="site-navigation-block">
-                        <a href="index.html" class="site-navigation-logo">
-                            <img src="static/img/logo.png" alt="#">
-                        </a>
+    <body>
+        <div class="site-wrapper">
+            <header class="site-header" data-product="gemini" id="site-header">
+                <div class="site-content">
+                    <nav class="site-navigation">
+                        <div class="site-navigation-block">
+                            <a href="index.html" class="site-navigation-logo">
+                                <img src="static/img/logo.png" alt="#">
+                            </a>
+                        </div>
+                        <div class="site-navigation-block site-navigation-links">
+                            <a class="site-navigation-link" href="index.html">首页</a>
+                            <a class="site-navigation-link" href="tool.html">产品列表</a>
+                            <a class="site-navigation-link" href="#">解决方案</a>
+                            <a class="site-navigation-link" href="partner.html">合作伙伴</a>
+                            <a class="site-navigation-link" href="about.html">公司介绍</a>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <div class="tabbable tabs-left" style="background:#0070B8">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#lA" data-toggle="tab">运维咨询</a></li>
+                    <li class=""><a href="#lB" data-toggle="tab">架构设计</a></li>
+                    <li class=""><a href="#lC" data-toggle="tab">运维服务</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="lA">
+                        <img src="static/img/ops_consult_0.png" width="900" height="700">
+                        <img src="static/img/ops_consult_1.png" width="900" height="700">
                     </div>
-                    <div class="site-navigation-block site-navigation-links">
-                        <a class="site-navigation-link" href="index.html">首页</a>
-                        <a class="site-navigation-link" href="tool.html">产品列表</a>
-                        <a class="site-navigation-link" href="#">解决方案</a>
-                        <a class="site-navigation-link" href="partner.html">合作伙伴</a>
-                        <a class="site-navigation-link" href="about.html">公司介绍</a>
+                    <div class="tab-pane" id="lB">
+                        <img src="static/img/ops_arch_1.png" width="900" height="700">
+                        <img src="static/img/ops_arch_2.png" width="900" height="700">
                     </div>
-                </nav>
+                    <div class="tab-pane" id="lC">
+                        <img src="static/img/ops_srv_1.png" width="900" height="700">
+                        <img src="static/img/ops_srv_2.png" width="900" height="700">
+                        <img src="static/img/ops_srv_3.png" width="900" height="700">
+                    </div>
+                </div>
+                <script src="static/js/jquery.min.js"></script>
+                <script src="static/js/bootstrap.min.js"></script>
             </div>
-            <script>window.os_correct = 1;</script>
-        </header>
-        <body>
-            <div>
-                <div class="tabbable tabs-left" style="background:#0070B8">
-                    <ul class="nav nav-tabs">
-                        <li class="active"><a href="#lA" data-toggle="tab">运维咨询</a></li>
-                        <li class=""><a href="#lB" data-toggle="tab">架构设计</a></li>
-                        <li class=""><a href="#lC" data-toggle="tab">运维服务</a></li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="lA">
-                            <img src="static/img/ops_consult_0.png" width="900" height="700">
-                            <img src="static/img/ops_consult_1.png" width="900" height="700">
-                            <img src="static/img/ops_consult_2.png" width="900" height="700">
-                        </div>
-                        <div class="tab-pane" id="lB">
-                            <img src="static/img/ops_arch_1.png" width="900" height="700">
-                            <img src="static/img/ops_arch_2.png" width="900" height="700">
-                        </div>
-                        <div class="tab-pane" id="lC">
-                            <img src="static/img/ops_srv_1.png" width="900" height="700">
-                            <img src="static/img/ops_srv_2.png" width="900" height="700">
-                            <img src="static/img/ops_srv_3.png" width="900" height="700">
-                        </div>
-                    </div>
-                </div> <!-- /tabbable -->
-            </div>
-            <script src="static/js/jquery.min.js"></script>
-            <script src="static/js/bootstrap.min.js"></script>
+        </div>
     </body>
 </html>

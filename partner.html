@@ -1,180 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>OneOaaS运维架构 运维服务 运维工具解决方案专家</title>
-
-    <link href='static/css/fonts.css' rel='stylesheet' type='text/css'>
-    <link href="static/css//core.css" rel="stylesheet"/>
-    <script src="static/js/jquery.js"></script>
-    <!--script src="static/js/ga_social_tracking.js"></script>
-    <script src="static/js/component.js"></script>
-    <script src="static/js/hires.js"></script-->
-    <script src="static/js/carousel.js"></script>
-    <script src="static/js/modal.js"></script>
-    <script src="static/js/download_popup.js"></script>
-    <script src="static/js/subscribe.js"></script>
-    <script src="static/js/banner.js"></script>
-    <link href="static/css/style.css" rel="stylesheet"/>
-    <script src="static/js/index.js"></script>
-</head>
-<body>
-
-
-<div class="site-wrapper">
-
-    <header class="site-header" data-product="gemini" id="site-header">
-        <div class="site-content">
-
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
+    <head>
+        <meta charset="UTF-8">
+        <title>OneOaaS运维架构 运维服务 运维工具解决方案专家</title>
+        <link href='static/css/fonts.css' rel='stylesheet' type='text/css'>
+        <link href="static/css//core.css" rel="stylesheet"/>
+        <script src="static/js/jquery.js"></script>
+        <!--script src="static/js/ga_social_tracking.js"></script>
+        <script src="static/js/component.js"></script>
+        <script src="static/js/hires.js"></script-->
+        <script src="static/js/carousel.js"></script>
+        <script src="static/js/modal.js"></script>
+        <script src="static/js/subscribe.js"></script>
+        <script src="static/js/banner.js"></script>
+        <link href="static/css/style.css" rel="stylesheet"/>
+        <script src="static/js/index.js"></script>
+    </head>
+    <body>
+        <div class="site-wrapper">
+            <header class="site-header" data-product="gemini" id="site-header">
+                <div class="site-content">
+                    <script>
+                    document.addEventListener('DOMContentLoaded', function () {
                     // products
                     var products_modal = new Modal('#site-modal-products'),
-                            products_nav = document.querySelector('#site-navigation-products');
+                    products_nav = document.querySelector('#site-navigation-products');
                     products_nav.addEventListener('click', function (event) {
-                        products_modal.open();
+                    products_modal.open();
                     });
                     document.querySelector('#site-modal-products').addEventListener('click', function (event) {
-                        if (!event.target.hasAttribute('href') && !event.target.parentNode.hasAttribute('href')) {
-                            products_modal.close();
-                        }
+                    if (!event.target.hasAttribute('href') && !event.target.parentNode.hasAttribute('href')) {
+                    products_modal.close();
+                    }
                     });
-
-
-                });
-            </script>
-
-            <nav class="site-navigation">
-                <div class="site-navigation-block">
-                    <a href="parindex.html" class="site-navigation-logo">
-                        <img src="static/img/logo.png" alt="#">
-                    </a>
-                </div>
-                <div class="site-navigation-block site-navigation-links">
-                    <a class="site-navigation-link" href="index.html">首页</a>
-                    <div class="site-navigation-link site-navigation-link-dd" id="site-navigation-products">产品列表</div>
-                    <a class="site-navigation-link" href="sulotion.html">解决方案</a>
-                    <a class="site-navigation-link" href="#">合作伙伴</a>
-                    <a class="site-navigation-link" href="about.html">公司介绍</a>
-                </div>
-            </nav>
-
-            <div class="modal-content" id="site-modal-products" style="width: 890px;">
-                <div class="modal-title">运维服务</div>
-                <div class="modal-grid">
-                    <div class="modal-grid-row">
-                        <div class="modal-grid-cell">
-                            <a href="sulotion.html" class="modal-grid-item">
-                                <img src="static/img/opsarch.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
-                                <span class="modal-products-name">运维架构</span>
+                    });
+                    </script>
+                    <nav class="site-navigation">
+                        <div class="site-navigation-block">
+                            <a href="parindex.html" class="site-navigation-logo">
+                                <img src="static/img/logo.png" alt="#">
                             </a>
                         </div>
-                        <div class="modal-grid-cell">
-                            <a href="sulotion.html" class="modal-grid-item">
-                                <img src="static/img/opservice.jpg" width="300" height="180" class="modal-products-ico"
-                                     alt=""/>
-                                <span class="modal-products-name">运维服务</span>
-                            </a>
+                        <div class="site-navigation-block site-navigation-links">
+                            <a class="site-navigation-link" href="index.html">首页</a>
+                            <div class="site-navigation-link site-navigation-link-dd" id="site-navigation-products">产品列表</div>
+                            <a class="site-navigation-link" href="sulotion.html">解决方案</a>
+                            <a class="site-navigation-link" href="#">合作伙伴</a>
+                            <a class="site-navigation-link" href="about.html">公司介绍</a>
                         </div>
-                    </div>
-                    <div class="modal-grid-row">
-                        <div class="modal-grid-cell">
-                            <a href="partner.html" class="modal-grid-item">
-                                <img src="static/img/opstool.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
-                                <span class="modal-products-name">开源工具</span>
-                            </a>
-                        </div>
-                        <div class="modal-grid-cell">
-                            <a href="tool.html" class="modal-grid-item">
-                                <img src="static/img/monitor.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
-                                <span class="modal-products-name">自研工具</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="header-products-gallery" data-carousel="index">
-            <body>
-            <div class="wrapper">
-                <div class="clearfix">
-                    <div class="header-products-gallery" data-carousel="index">
-                        <div class="header-products-gallery-items">
-                            <div class="header-products-gallery-item active" data-product="oneoaas"
-                                 data-carousel-item style="  margin-top: -124px; margin-left: 150px">
-                                <div>
-                                    <h1 style="color:white">商业软件、硬件(Business HardWare & SoftWare)</h1>
-                                    <a>我们通过长期和硬件软件厂商良好合作,具备合作天然优势</a></br>
-                                    <img src="static/img/zabbix/Zabbix_Reseller_Partner_logo_large.png" style="width: 250px" height="94px">
-                                    <img src="static/img/dell/dell-logo-wb.png" style="width: 94px" height="94px">
-                                    <img src="static/img/partner/vmware/vmware-Logo.png" style="width: 250px" height="94px">
-                                    <img src="static/img/partner/emc/emc-logo.jpg" style="width: 250px" height="94px">
-                                    <img src="static/img/partner/cisco/cisco-logo.png" style="width: 250px" height="94px">
-                                    </br></br><h3 style="color:white">开源软件(OpenSouce SoftWare)</h3>
-                                    <a>开源软件由于高度灵活,可完全自主可控,被大部分公司所采用,故精通各种开源软件架构,势在必行.</br>
-                                    我们拥有精通各种开源软件架构的专家为您坐阵,让您能够放心省时省力地使用开源软件,</br>
-                                    从而保障您的业务系统的可靠稳定高效运行</a></br>
-                                    <!--img src="static/img/partner/opensouce/centos.png" style="width: 260px" height="94px">
-                                    <img src="static/img/partner/opensouce/opensuse.png" style="width: 250px" height="94px">
-                                    <img src="static/img/partner/opensouce/ubuntu.jpg" style="width: 250px" height="94px"-->
-                                    <!--img src="static/img/partner/opensouce/kvm-logo.png" style="width: 260px" height="94px"></br-->
-                                    <img src="static/img/partner/opensouce/haproxy-logo.png" style="width: 250px" height="94px">
-                                    <img src="static/img/partner/opensouce/lvs-logo.png" style="width: 94px" height="94px">
-                                    <img src="static/img/partner/opensouce/keepalived.png" style="width: 250px" height="94px">
-                                    <img src="static/img/partner/opensouce/nginx-logo.jpg" style="width: 250px" height="94px">
-                                    <img src="static/img/partner/opensouce/tengine-logo.png" style="width: 250px" height="94px">
+                    </nav>
+                    <div class="modal-content" id="site-modal-products" style="width: 890px;">
+                        <div class="modal-title">运维服务</div>
+                        <div class="modal-grid">
+                            <div class="modal-grid-row">
+                                <div class="modal-grid-cell">
+                                    <a href="sulotion.html" class="modal-grid-item">
+                                        <img src="static/img/opsarch.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
+                                        <span class="modal-products-name">运维架构</span>
+                                    </a>
                                 </div>
-                                <!--div class="button" style="margin-top:-12px">
-                                    <div class="cols-2-layout-50">
-                                        <div>
-                                            <h3>OneOasS</h3>
-                                            </br>
-                                            <dl>
-                                                <dt>全面的数据中心自动化解决方案</dt>
-                                                <dd>架构开放;可按需定制;性价比高;
-                                                </dd>
-                                                <dd>数据中心自动化,;可靠稳定,具备</dd>
-                                                <dd>生产应用运行支撑能力</dd>
-                                            </dl>
-                                            <dl>
-                                                <dt>产品特性:</dt>
-                                                <dd>1．国产化，开放，可按需定制。基础设施软硬件不被任</dd>
-                                                <dd>何厂商产品锁定，用户方对整个云平台的掌控力度很强。</dd>
-                                                <dd>2．解决方案较为全面。如混合虚拟化资源管理，</dd>
-                                                <dd>基础设施运营监控，自动化作业调度平台等。</dd>
-                                                <dd>3．具备明显的性价比优势。一站式解决方案，</dd>
-                                                <dd>不需要采购其它商业软件，同时具备高品质服务。</dd>
-                                            </dl>
-                                        </div>
-                                    </div>
-                                </div-->
-                                <!--div class="button" style=" margin-top: -12px">
-                                    <div class="cols-2-layout-5">
-                                        <div>
-                                            <img src="static/img/about2.jpg" style="width: 433px" height="450px">
-                                        </div>
-                                    </div>
-                                </div-->
+                                <div class="modal-grid-cell">
+                                    <a href="sulotion.html" class="modal-grid-item">
+                                        <img src="static/img/opservice.jpg" width="300" height="180" class="modal-products-ico"
+                                        alt=""/>
+                                        <span class="modal-products-name">运维服务</span>
+                                    </a>
+                                </div>
                             </div>
-
+                            <div class="modal-grid-row">
+                                <div class="modal-grid-cell">
+                                    <a href="partner.html" class="modal-grid-item">
+                                        <img src="static/img/opstool.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
+                                        <span class="modal-products-name">开源工具</span>
+                                    </a>
+                                </div>
+                                <div class="modal-grid-cell">
+                                    <a href="tool.html" class="modal-grid-item">
+                                        <img src="static/img/monitor.jpg" width="300" height="180" class="modal-products-ico" alt=""/>
+                                        <span class="modal-products-name">自研工具</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <script>
-                    window.os_correct = 1;
-                </script>
-
-                <div class="modal-overlay" id="modal-overlay">
-                    <div class="modal" id="modal"></div>
+                <div class="header-products-gallery" data-carousel="index">
+                    <div class="wrapper">
+                        <div class="clearfix">
+                            <div class="header-products-gallery" data-carousel="index">
+                                <div class="header-products-gallery-items">
+                                    <div class="header-products-gallery-item active" data-product="oneoaas"
+                                        data-carousel-item style="  margin-top: -124px; margin-left: 150px">
+                                        <div>
+                                            <h1 style="color:white">商业软件、硬件(Business HardWare & SoftWare)</h1>
+                                            <a>我们通过长期和硬件软件厂商良好合作,具备合作天然优势</a></br>
+                                            <img src="static/img/zabbix/Zabbix_Reseller_Partner_logo_large.png" style="width: 250px" height="94px">
+                                            <img src="static/img/dell/dell-logo-wb.png" style="width: 94px" height="94px">
+                                            <img src="static/img/partner/vmware/vmware-Logo.png" style="width: 250px" height="94px">
+                                            <img src="static/img/partner/emc/emc-logo.jpg" style="width: 250px" height="94px">
+                                            <img src="static/img/partner/cisco/cisco-logo.png" style="width: 250px" height="94px">
+                                            </br></br><h3 style="color:white">开源软件(OpenSouce SoftWare)</h3>
+                                            <a>开源软件由于高度灵活,可完全自主可控,被大部分公司所采用,故精通各种开源软件架构,势在必行.</br>
+                                                我们拥有精通各种开源软件架构的专家为您坐阵,让您能够放心省时省力地使用开源软件,</br>
+                                            从而保障您的业务系统的可靠稳定高效运行</a></br>
+                                            <!--img src="static/img/partner/opensouce/centos.png" style="width: 260px" height="94px">
+                                            <img src="static/img/partner/opensouce/opensuse.png" style="width: 250px" height="94px">
+                                            <img src="static/img/partner/opensouce/ubuntu.jpg" style="width: 250px" height="94px"-->
+                                            <!--img src="static/img/partner/opensouce/kvm-logo.png" style="width: 260px" height="94px"></br-->
+                                            <img src="static/img/partner/opensouce/haproxy-logo.png" style="width: 250px" height="94px">
+                                            <img src="static/img/partner/opensouce/lvs-logo.png" style="width: 94px" height="94px">
+                                            <img src="static/img/partner/opensouce/keepalived.png" style="width: 250px" height="94px">
+                                            <img src="static/img/partner/opensouce/nginx-logo.jpg" style="width: 250px" height="94px">
+                                            <img src="static/img/partner/opensouce/tengine-logo.png" style="width: 250px" height="94px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                        window.os_correct = 1;
+                        </script>
+                        <div class="modal-overlay" id="modal-overlay">
+                            <div class="modal" id="modal"></div>
+                        </div>
+                    </div>
                 </div>
-
-
-            </div>
-            </body>
+            </header>
         </div>
-    </header>
-</div>
-</body>
+    </body>
 </html>
